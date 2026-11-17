@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "schema-locked-legal-drafter"
+version = "0.1.0"
+description = "Template-constrained legal agreement drafting SaaS across 11 document schemas with typed extraction, XSS-escaped live preview, and user-scoped SQLite storage."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "pydantic>=2.6.0",
+    "fastapi>=0.110.0",
+    "litellm>=1.35.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
