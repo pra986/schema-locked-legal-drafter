@@ -1,0 +1,26 @@
+[
+  {
+    "id": "eval_01_incomplete_export_blocked",
+    "template_id": "mutual_nda",
+    "description": "Blocks PDF export when required fields are missing",
+    "expected_export_allowed": false
+  },
+  {
+    "id": "eval_02_xss_escaped_preview",
+    "template_id": "consulting_services",
+    "description": "Escapes HTML/script payloads in party names inside live HTML preview",
+    "expected_escaped": true
+  },
+  {
+    "id": "eval_03_cross_user_isolation",
+    "template_id": "employment_offer",
+    "description": "Denies read/export access to drafts owned by another user_id",
+    "expected_isolated": true
+  },
+  {
+    "id": "eval_04_preview_pdf_byte_parity",
+    "template_id": "mutual_nda",
+    "description": "Ensures exported PDF payload hash matches rendered preview hash",
+    "expected_parity": true
+  }
+]
